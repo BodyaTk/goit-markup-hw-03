@@ -55,7 +55,7 @@ h3 {
   color: #2e2f42;
 }
 .container {
-  max-width: 1158px;
+  width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
