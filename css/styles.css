@@ -1,15 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   color: #434455;
   background-color: #fff;
   font-family: 'Roboto', sans-serif;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 ul {
   list-style-type: none;
+  margin: 0;
+  padding-left: 0;
 }
+
 a {
   color: currentColor;
   text-decoration: none;
 }
+
 a:hover,
 a:focus {
   color: #404bbf;
@@ -23,9 +49,31 @@ address {
 button {
   font-family: inherit;
   cursor: pointer;
+  border: 0px solid transparent;
 }
 h3 {
   color: #2e2f42;
+}
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .indexlink {
@@ -36,10 +84,29 @@ h3 {
   text-transform: uppercase;
   font-weight: 700;
   color: #4d5ae5;
+  margin-right: 76px;
+}
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
 }
 
 .menu-item {
   color: #2e2f42;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 24px 0;
 }
 
 .menu-link {
@@ -47,16 +114,33 @@ h3 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding: 24px 0;
 }
 
 .address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-left: auto;
+}
+
+.address-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.address-link {
+  padding: 24px 0;
 }
 
 .heroic {
   background-color: #2e2f42;
+}
+.container.heroic {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .header-main {
@@ -65,6 +149,7 @@ h3 {
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
+  max-width: 496px;
 }
 
 .main-btn {
@@ -74,10 +159,15 @@ h3 {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
+  padding: 16px 32px;
+  border-radius: 4px;
 }
 button:hover,
 button:focus {
   background-color: #404bbf;
+}
+.smart {
+  padding-bottom: 95px;
 }
 
 .smart-title {
@@ -85,6 +175,11 @@ button:focus {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+.smart-item {
+  display: flex;
+  gap: 24px;
 }
 
 .smart-ctn {
@@ -92,8 +187,13 @@ button:focus {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
 .team {
   background-color: #f4f4fd;
+}
+.card {
+  display: flex;
+  gap: 24px;
 }
 .team-title {
   font-size: 36px;
@@ -102,20 +202,34 @@ button:focus {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
 .team-card {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  border-radius: 0 0 4px 4px;
 }
 .team-name {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 .team-ctn {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+.portfolio-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .portfolio-title {
@@ -125,6 +239,11 @@ button:focus {
   text-align: center;
   text-transform: capitalize;
   color: #2e2f42;
+  margin-bottom: 72px;
+}
+.portfolio-title-card,
+.potrfolio-ctn {
+  margin-left: 16px;
 }
 
 .portfolio-title-card {
@@ -132,14 +251,21 @@ button:focus {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-top: 32px;
+  margin-bottom: 8px;
 }
 .potrfolio-ctn {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+.portfolio-card {
+  border-bottom: 1px solid #e7e9fc;
 }
 .footer {
   background-color: #2e2f42;
+  padding: 100px 0;
 }
 
 .footer-ctn {
@@ -147,6 +273,7 @@ button:focus {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  max-width: 264px;
 }
 .footer-link {
   font-family: 'Raleway', sans-serif;
@@ -156,6 +283,8 @@ button:focus {
   text-transform: uppercase;
   color: #4d5ae5;
   font-weight: 700;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .studio {
   color: #f4f4fd;
